@@ -1,0 +1,25 @@
+{
+  "name": "mybb/gravatar",
+  "description": "Easy Gravatar generation for Laravel 5.0.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Euan T",
+      "email": "euantor@mybb.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MyBB\\Gravatar\\": "src/",
+      "MyBB\\Gravatar\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support" : "5.0.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.6.*"
+  }
+}
