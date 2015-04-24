@@ -24,7 +24,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
 
-		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=64&d=mm&rating=g";
+		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=80&d=mm&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -38,7 +38,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setEmail($email);
 		$generator->setSecure(true);
 
-		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=64&d=mm&rating=g";
+		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=80&d=mm&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -63,7 +63,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setEmail($email);
 		$generator->setExtension($extension);
 
-		$expected = "http://www.gravatar.com/avatar/{$emailHash}.{$extension}?s=64&d=mm&rating=g";
+		$expected = "http://www.gravatar.com/avatar/{$emailHash}.{$extension}?s=80&d=mm&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -79,7 +79,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setExtension($extension);
 		$generator->setSecure(true);
 
-		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.{$extension}?s=64&d=mm&rating=g";
+		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.{$extension}?s=80&d=mm&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -125,7 +125,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setEmail($email);
 		$generator->setDefault($default);
 
-		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=64&d={$default}&rating=g";
+		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=80&d={$default}&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -141,7 +141,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setDefault($default);
 		$generator->setSecure(true);
 
-		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=64&d={$default}&rating=g";
+		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=80&d={$default}&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -157,7 +157,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setDefault($default);
 		$generator->setForceDefault(true);
 
-		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=64&d={$default}&forcedefault=y&rating=g";
+		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=80&d={$default}&forcedefault=y&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -174,7 +174,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setForceDefault(true);
 		$generator->setSecure(true);
 
-		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=64&d={$default}&forcedefault=y&rating=g";
+		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=80&d={$default}&forcedefault=y&rating=g";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -189,7 +189,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setEmail($email);
 		$generator->setRating($rating);
 
-		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=64&d=mm&rating={$rating}";
+		$expected = "http://www.gravatar.com/avatar/{$emailHash}.png?s=80&d=mm&rating={$rating}";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}
@@ -205,7 +205,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 		$generator->setRating($rating);
 		$generator->setSecure(true);
 
-		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=64&d=mm&rating={$rating}";
+		$expected = "https://secure.gravatar.com/avatar/{$emailHash}.png?s=80&d=mm&rating={$rating}";
 
 		$this->assertEquals($expected, $generator->getGravatar());
 	}

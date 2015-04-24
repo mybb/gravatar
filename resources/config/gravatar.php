@@ -13,7 +13,7 @@
 return [
 	'secure'        => true,
 	'extension'     => '.png',
-	'size'          => 64,
+	'size'          => 80,
 	'default'       => 'mm',
 	'force_default' => false,
 	'rating'        => 'g',
