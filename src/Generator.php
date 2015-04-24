@@ -48,7 +48,7 @@ class Generator
 	];
 
 	/**
-	 * @var bool $secure
+	 * @var boolean $secure
 	 */
 	protected $secure;
 
@@ -63,7 +63,7 @@ class Generator
 	protected $extension;
 
 	/**
-	 * @var int $size
+	 * @var integer $size
 	 */
 	protected $size;
 
@@ -73,7 +73,7 @@ class Generator
 	protected $default;
 
 	/**
-	 * @var bool $forceDefault
+	 * @var boolean $forceDefault
 	 */
 	protected $forceDefault;
 
@@ -113,7 +113,7 @@ class Generator
 	/**
 	 * Whether to use Https for gravatars.
 	 *
-	 * @param bool $secure
+	 * @param boolean $secure
 	 *
 	 * @return $this
 	 */
@@ -145,7 +145,7 @@ class Generator
 	/**
 	 * Set image size.
 	 *
-	 * @param int $size The size to be used
+	 * @param integer $size The size to be used
 	 *
 	 * @return $this
 	 */
@@ -190,7 +190,7 @@ class Generator
 	/**
 	 * Force the default avatar.
 	 *
-	 * @param bool $force
+	 * @param boolean $force
 	 *
 	 * @return $this
 	 */

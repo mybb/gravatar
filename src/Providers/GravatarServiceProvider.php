@@ -21,7 +21,7 @@ class GravatarServiceProvider extends ServiceProvider
 	/**
 	 * Indicates if loading of the provider is deferred.
 	 *
-	 * @var bool
+	 * @var boolean
 	 */
 	protected $defer = true;
 
@@ -29,12 +29,17 @@ class GravatarServiceProvider extends ServiceProvider
 	 * Boot the service provider.
 	 *
 	 * @param Repository $config
+	 *
+	 * @return void
 	 */
 	public function boot(Repository $config)
 	{
-		$this->app->bind('gravatar', function() use ($config) {
-			return new Generator($config->get('gravatar'));
-		});
+		$this->app->bind(
+			'gravatar',
+			function () use ($config) {
+				return new Generator($config->get('gravatar'));
+			}
+		);
 	}
 
 	/**
@@ -44,7 +49,7 @@ class GravatarServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app['config']->package('mybb/gravatar', __DIR__.'/../resources/config/');
+		$this->app['config']->package('mybb/gravatar', __DIR__ . '/../resources/config/');
 	}
 
 	/**
