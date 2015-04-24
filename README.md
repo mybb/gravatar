@@ -2,6 +2,8 @@
 
 Easy Gravatar generation for Laravel 5.0
 
+[![Circle CI](https://circleci.com/gh/mybb/gravatar.svg?style=svg)](https://circleci.com/gh/mybb/gravatar)
+
 ##Installation
 
 Install via composer:
