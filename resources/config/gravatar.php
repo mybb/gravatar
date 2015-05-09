@@ -6,7 +6,7 @@
  * @version   2.0.0
  * @package   mybb/gravatar
  * @copyright Copyright (c) 2015, MyBB Group
- * @license   https://github.com/mybb/gravatar/blob/master/LICENSE MIT LICENSE
+ * @license   http://www.mybb.com/licenses/bsd3 BSD-3
  * @link      http://www.mybb.com
  */
 

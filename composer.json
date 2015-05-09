@@ -2,7 +2,7 @@
   "name": "mybb/gravatar",
   "description": "Easy Gravatar generation for Laravel 5.0.",
   "minimum-stability": "dev",
-  "license": "MIT",
+  "license": "BSD-3",
   "authors": [
     {
       "name": "Euan T",
