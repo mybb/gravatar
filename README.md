@@ -31,6 +31,14 @@ Edit `config/app.php`
 ],
 ```
 
+##Configuration
+
+You may publish the config file to config/gravatar.php allowing you to set the defaults:
+
+```bash
+php artisan vendor:publish --provider='MyBB\Gravatar\Providers\GravatarServiceProvider'
+```
+
 ##Usage
 
 ```php
@@ -46,6 +54,11 @@ $gravatarUrl = $generator->getGravatar('mail@domain.com');
 
 $generator->setSecure(false)->setExtension('jpg')->setSize(32)->setDefault('identicon')->setEmail('mail@domain.com');
 $gravatarUrl = (string) $generator;
+
+// OR call using Laravel's facade
+
+$gravatarUrl = Gravatar::setSize(32)->getGravatar('mail@domain.com');
+
 ```
 
 ##License
