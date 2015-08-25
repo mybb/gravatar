@@ -1,6 +1,6 @@
 <?php
 /**
- * Gravatar Service provider for Laravel 5.0.
+ * Gravatar Service provider for Laravel 5
  *
  * @author    MyBB Group
  * @version   2.0.0
@@ -12,55 +12,53 @@
 
 namespace MyBB\Gravatar\Providers;
 
-use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\ServiceProvider;
 use MyBB\Gravatar\Generator;
 
 class GravatarServiceProvider extends ServiceProvider
 {
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var boolean
-	 */
-	protected $defer = true;
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var boolean
+     */
+    protected $defer = true;
 
-	/**
-	 * Boot the service provider.
-	 *
-	 * @param Repository $config
-	 *
-	 * @return void
-	 */
-	public function boot(Repository $config)
-	{
-		$this->app->bind(
-			'gravatar',
-			function () use ($config) {
-				return new Generator($config->get('gravatar'));
-			}
-		);
-	}
+    /**
+     * Boot the service provider.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $configPath = __DIR__ . '/../../resources/config/gravatar.php';
+        if (function_exists('config_path')) {
+            $publishPath = config_path('gravatar.php');
+        } else {
+            $publishPath = base_path('config/gravatar.php');
+        }
+        $this->publishes([$configPath => $publishPath], 'config');
+    }
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		$this->app['config']->package('mybb/gravatar', __DIR__ . '/../resources/config/');
-	}
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton('gravatar', function ($app) {
+            return new Generator(config('gravatar'));
+        });
+    }
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return [
-			'gravatar'
-		];
-	}
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['gravatar'];
+    }
 }
