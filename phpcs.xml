@@ -6,5 +6,5 @@
     <file>resources</file>
     <file>tests</file>
 
-    <rule ref="MyBB2"/>
+    <rule ref="MyBB2/MyBB2"/>
 </ruleset>
