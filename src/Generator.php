@@ -17,12 +17,12 @@ class Generator
 	/**
 	 * Base URL to the Gravatar service.
 	 */
-	const BASEURL = 'http://www.gravatar.com/avatar/';
+	const BASE_URL = 'http://www.gravatar.com/avatar/';
 
 	/**
 	 * Base URL to the Gravatar service for secure connections (over HTTPS).
 	 */
-	const BASEURL_SECURE = 'https://secure.gravatar.com/avatar/';
+	const BASE_URL_SECURE = 'https://secure.gravatar.com/avatar/';
 
 	/**
 	 * @var array
@@ -240,9 +240,9 @@ class Generator
 			$this->setEmail((string) $email);
 		}
 
-		$url = self::BASEURL;
+		$url = self::BASE_URL;
 		if ($this->secure) {
-			$url = self::BASEURL_SECURE;
+			$url = self::BASE_URL_SECURE;
 		}
 
 		$url .= $this->email;
