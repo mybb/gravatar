@@ -119,7 +119,7 @@ class Generator
 	 */
 	public function setSecure($secure = true)
 	{
-		$this->secure = (bool) $secure;
+		$this->secure = (bool)$secure;
 
 		return $this;
 	}
@@ -151,7 +151,7 @@ class Generator
 	 */
 	public function setSize($size = 32)
 	{
-		$size = (int) $size;
+		$size = (int)$size;
 
 		// Gravatars can be sized 1px up to 2048px square: https://en.gravatar.com/site/implement/images/#size
 		if ($size < 1) {
@@ -178,8 +178,8 @@ class Generator
 	{
 		$default = trim($default);
 
-		if (in_array((string) $default, static::$defaultGravatars)) {
-			$this->default = (string) $default;
+		if (in_array((string)$default, static::$defaultGravatars)) {
+			$this->default = (string)$default;
 		} elseif (strpos($default, 'http') !== false && filter_var($default, FILTER_VALIDATE_URL)) {
 			$this->default = urlencode($default);
 		}
@@ -196,7 +196,7 @@ class Generator
 	 */
 	public function setForceDefault($force = true)
 	{
-		$this->forceDefault = (bool) $force;
+		$this->forceDefault = (bool)$force;
 	}
 
 	/**
@@ -208,7 +208,7 @@ class Generator
 	 */
 	public function setRating($rating = 'g')
 	{
-		$rating = (string) $rating;
+		$rating = (string)$rating;
 
 		if (in_array($rating, static::$ageRatings)) {
 			$this->rating = $rating;
@@ -237,7 +237,7 @@ class Generator
 	public function getGravatar($email = null)
 	{
 		if (isset($email)) {
-			$this->setEmail((string) $email);
+			$this->setEmail((string)$email);
 		}
 
 		$url = self::BASE_URL;
@@ -268,7 +268,7 @@ class Generator
 	 */
 	public function setEmail($email = '')
 	{
-		$email = (string) $email;
+		$email = (string)$email;
 
 		// According to the docs, emails should be lowercase: https://en.gravatar.com/site/implement/hash/
 		$email = trim($email);

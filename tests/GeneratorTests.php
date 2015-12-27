@@ -18,7 +18,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 {
 	public function testBasicEmail()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
 
 		$generator = new Generator(['secure' => false]);
@@ -31,7 +31,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testBasicEmailSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
 
 		$generator = new Generator();
@@ -55,7 +55,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetExtension()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
 		$extension = 'jpg';
 
@@ -70,7 +70,7 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetExtensionSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
 		$extension = 'jpg';
 
@@ -86,9 +86,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetSize()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$size      = 100;
+		$size = 100;
 
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
@@ -101,9 +101,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetSizeSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$size      = 100;
+		$size = 100;
 
 		$generator = new Generator();
 		$generator->setEmail($email);
@@ -117,9 +117,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetDefault()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$default   = 'retro';
+		$default = 'retro';
 
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
@@ -132,9 +132,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetDefaultSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$default   = 'retro';
+		$default = 'retro';
 
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
@@ -148,9 +148,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testForceDefault()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$default   = 'retro';
+		$default = 'retro';
 
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
@@ -164,9 +164,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testForceDefaultSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$default   = 'retro';
+		$default = 'retro';
 
 		$generator = new Generator();
 		$generator->setEmail($email);
@@ -181,9 +181,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetRating()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$rating    = 'pg';
+		$rating = 'pg';
 
 		$generator = new Generator(['secure' => false]);
 		$generator->setEmail($email);
@@ -196,9 +196,9 @@ class GeneratorTests extends \PHPUnit_Framework_TestCase
 
 	public function testSetRatingSecure()
 	{
-		$email     = 'test@email.com';
+		$email = 'test@email.com';
 		$emailHash = md5($email);
-		$rating    = 'pg';
+		$rating = 'pg';
 
 		$generator = new Generator();
 		$generator->setEmail($email);
