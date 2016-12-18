@@ -11,10 +11,10 @@
  */
 
 return [
-	'secure'        => true,
-	'extension'     => '.png',
-	'size'          => 80,
-	'default'       => 'mm',
-	'force_default' => false,
-	'rating'        => 'g',
+    'secure'        => true,
+    'extension'     => '.png',
+    'size'          => 80,
+    'default'       => 'mm',
+    'force_default' => false,
+    'rating'        => 'g',
 ];

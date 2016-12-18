@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Facade;
 
 class GravatarFacade extends Facade
 {
-	/**
-	 * Get the registered name of the component.
-	 *
-	 * @return string
-	 */
-	protected static function getFacadeAccessor()
-	{
-		return 'gravatar';
-	}
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'gravatar';
+    }
 }

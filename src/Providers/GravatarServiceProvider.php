@@ -17,48 +17,48 @@ use MyBB\Gravatar\Generator;
 
 class GravatarServiceProvider extends ServiceProvider
 {
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var boolean
-	 */
-	protected $defer = true;
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var boolean
+     */
+    protected $defer = true;
 
-	/**
-	 * Boot the service provider.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$configPath = __DIR__ . '/../../resources/config/gravatar.php';
-		if (function_exists('config_path')) {
-			$publishPath = config_path('gravatar.php');
-		} else {
-			$publishPath = base_path('config/gravatar.php');
-		}
-		$this->publishes([$configPath => $publishPath], 'config');
-	}
+    /**
+     * Boot the service provider.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $configPath = __DIR__ . '/../../resources/config/gravatar.php';
+        if (function_exists('config_path')) {
+            $publishPath = config_path('gravatar.php');
+        } else {
+            $publishPath = base_path('config/gravatar.php');
+        }
+        $this->publishes([$configPath => $publishPath], 'config');
+    }
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		$this->app->singleton('gravatar', function ($app) {
-			return new Generator(config('gravatar'));
-		});
-	}
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton('gravatar', function ($app) {
+            return new Generator(config('gravatar'));
+        });
+    }
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return ['gravatar'];
-	}
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['gravatar'];
+    }
 }
